@@ -1,0 +1,19 @@
+sdir=/sc/arion/projects/LOAD/Yiyuan/checkfsum
+cd ${sdir}
+snakejob --jobs 50 --cluster-config cluster.yaml -R all --configfile {{cookiecutter.root_folder}}/{{cookiecutter.author_name}}/rna_seq/inhouse/{{cookiecutter.study_name}}/data/checksum.yaml -s Snakefile
+
+
+sdir=/sc/arion/projects/LOAD/Yiyuan/rna
+cd ${sdir}
+snakejob --jobs 50 --cluster-config cluster.yaml -R all --configfile {{cookiecutter.root_folder}}/{{cookiecutter.author_name}}/rna_seq/inhouse/{{cookiecutter.study_name}}/data/rna_config.yaml -s Snakefile
+
+
+conda activate snakemake
+sdir=/hpc/users/rna/gsea
+cd ${sdir}
+snakejob --jobs 50 \
+ --cluster-config cluster.yaml \
+ -R all \
+ --configfile {{cookiecutter.root_folder}}/{{cookiecutter.author_name}}/rna_seq/inhouse/{{cookiecutter.study_name}}/data/gsea_config.yaml \
+ -s Snakefile
+
