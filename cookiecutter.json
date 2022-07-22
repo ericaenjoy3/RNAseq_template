@@ -1,0 +1,12 @@
+{
+  "folder_name": "cookiecutter",
+  "root_folder": [ 
+    "/sc/arion/projects/LOAD",
+    "/sc/arion/projects/load"
+  ],
+  "author_name": "",
+  "study_name": "",
+  "species": ["human", "mouse"],
+  "ref_base": "/sc/arion/projects/LOAD/nextflow/rna_nf/genome",
+  "ref_name": "{{ 'hg38_gencode' if cookiecutter.species == 'human' else 'mm10_gencode_M20' }}" 
+}
