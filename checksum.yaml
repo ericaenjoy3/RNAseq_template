@@ -1,0 +1,2 @@
+fifo:
+  din: {{cookiecutter.root_folder}}/{{cookiecutter.author_name}}/rna_seq/inhouse/{{cookiecutter.study_name}}/source 

@@ -1,0 +1,26 @@
+fifo:
+  sample: {{cookiecutter.root_folder}}/{{cookiecutter.author_name}}/rna_seq/inhouse/{{cookiecutter.study_name}}/data/sample_info_raw.tsv
+  dout: {{cookiecutter.root_folder}}/{{cookiecutter.author_name}}/rna_seq/inhouse/{{cookiecutter.study_name}}
+
+spec:
+  name_sample_as_it_is: True 
+
+ref:
+  name: {{cookiecutter.ref_name}} 
+  base: {{cookiecutter.ref_base}} 
+
+computation:
+  threads: 8 
+  ops: ['fastqc', 'cutadapt', 'fastqc', 'star', 'salmon', 'multiqc']
+  fqs: [ None, 'fq', None, None, None, None]
+
+star:
+  sjOverHang: 100
+
+kallisto:
+  fragment_len: 400
+  fragment_sd: 100
+  bootstrap: 100
+  strand_flag: fr-unstranded
+  
+

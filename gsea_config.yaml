@@ -1,0 +1,14 @@
+fifo:
+  sample: {{cookiecutter.root_folder}}/{{cookiecutter.author_name}}/rna_seq/inhouse/{{coookiecutter.study_name}}/star_cutadapt/geneProtein_gsea_nf.tsv
+  dout: {{cookiecutter.root_folder}}/{{cookiecutter.author_name}}/rna_seq/inhouse/{{cookiecutter.study_name}}/gsea_cutadapt
+
+species: {{cookiecutter.species}} 
+
+computation:
+  threads: 8  
+
+gsea:
+  gset_parameter: 
+  gsubset_parameter: 
+  fgset_parameter: ' --fgset '
+  nperm_parameter: ' --nperm 10000 '
