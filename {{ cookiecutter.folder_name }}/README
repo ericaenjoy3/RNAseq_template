@@ -8,8 +8,7 @@ cd ${sdir}
 snakejob --jobs 50 --cluster-config cluster.yaml -R all --configfile {{cookiecutter.root_folder}}/{{cookiecutter.author_name}}/rna_seq/inhouse/{{cookiecutter.study_name}}/data/rna_config.yaml -s Snakefile
 
 
-conda activate snakemake
-sdir=/hpc/users/rna/gsea
+sdir=/sc/arion/projects/LOAD/Yiyuan/gsea
 cd ${sdir}
 snakejob --jobs 50 \
  --cluster-config cluster.yaml \
